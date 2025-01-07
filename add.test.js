@@ -27,3 +27,7 @@ test("Custom delimiters should be supported", ()=>{
 test("Calling add with a negative number should throw an exception", ()=>{
     expect(()=>add("-1")).toThrow("negative numbers not allowed -1");
 });
+
+test("Calling add with multiple negative numbers should throw an exception mentioning al the -ve numbers", ()=>{
+    expect(()=>add("-1,3,4,-2,5,6")).toThrow("negative numbers not allowed -1,-2");
+});
