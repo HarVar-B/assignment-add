@@ -19,3 +19,7 @@ test("Multiple numbers should return sum", ()=>{
 test("New lines should be treated as delimiters", ()=>{
     expect(add("1\n2,3")).toBe(6);
 });
+
+test("Custom delimiters should be supported", ()=>{
+    expect(add("//;\n1;2")).toBe(3);
+});
