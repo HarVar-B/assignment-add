@@ -23,3 +23,7 @@ test("New lines should be treated as delimiters", ()=>{
 test("Custom delimiters should be supported", ()=>{
     expect(add("//;\n1;2")).toBe(3);
 });
+
+test("Calling add with a negative number should throw an exception", ()=>{
+    expect(()=>add("-1")).toThrow("negative numbers not allowed -1");
+});
