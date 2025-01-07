@@ -15,3 +15,7 @@ test("Two numbers should return sum", ()=>{
 test("Multiple numbers should return sum", ()=>{    
     expect(add("1,2,3,4,5")).toBe(15);
 });
+
+test("New lines should be treated as delimiters", ()=>{
+    expect(add("1\n2,3")).toBe(6);
+});
