@@ -5,10 +5,11 @@ function add(numbers){
         delimiter = numbers[2];
         numbers = numbers.substring(4);
     }
-    if(numbers.includes(delimiter)) numbers = numbers.replace(delimiter, ",");
-
+    if(numbers.includes(delimiter)) numbers = numbers.replaceAll(delimiter, ",");
+    
     if(numbers.includes("-")){
         let negatives = numbers.split(",").filter(num => num.includes("-"));
+        console.log(negatives);
         throw `negative numbers not allowed ${negatives.join(",")}`;
     }
 
